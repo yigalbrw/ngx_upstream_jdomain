@@ -636,9 +636,9 @@ ngx_http_upstream_jdomain(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 	/* Initial domain name resolution */
 	if (ngx_parse_url(cf->temp_pool, &u) != NGX_OK) {
 		ngx_sprintf(errstr, "ngx_http_upstream_jdomain_module: %s in upstream \"%V\"", u.err ? u.err : "error", &u.url);
- 		if (!exists_alt_server) {
- 			goto failure;
- 		}
+//  		if (!exists_alt_server) {
+//  			goto failure;
+//  		}
 		ngx_conf_log_error(NGX_LOG_WARN, cf, 0, (const char *)errstr);
 	}
 
